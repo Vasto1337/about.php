@@ -7,7 +7,6 @@
 <?php
 $name = 'Владимир';
 $age = '25';
-$city = 'Москва';
 if (isset($name) && isset($age)) {
     ?>
     <div>
@@ -35,11 +34,23 @@ if(isset($mail)) {
 }
 
 <?php
+$city = 'Москва';
+if (isset($city)) {
+    ?>
+    <div>
+        <h2>Город</h2>
+        <p><?= $city ?></p>
+    </div>
+<?php } else { ?>
+<div><h2>Информация не найдена</h2></div>
+}
+
+<?php
 $info = 'Kappa';
 if(isset($info)) {
     ?>
     <civ>
-        <h2>Информация о себе</h2>
+        <h2>О себе</h2>
         <p><?= $info ?></p>
     </civ>
 <?php } else { ?>
@@ -49,4 +60,4 @@ if(isset($info)) {
 
 </html>
 
-<?php}
+<?php }
